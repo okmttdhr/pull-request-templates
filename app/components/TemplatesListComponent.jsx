@@ -30,7 +30,7 @@ class TemplatesListComponent extends React.Component {
 
   render() {
     return (
-      <div className="TemplatesListComponent col-sm-2">
+      <div className="TemplatesListComponent">
         <ul className="TemplatesListComponent-list list-unstyled">
           <li className>
             <p onClick={this.handleClick}>チケット</p>

@@ -33,7 +33,11 @@
   text-decoration: underline;
 }
 
-.outputTextarea {
+.TemplateOutputComponent {
+
+}
+
+.TemplateOutputComponent-textarea--output {
   width: 100%;
   height: 500px;
   color: #333;

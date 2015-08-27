@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import TemplatesListComponent from '../components/TemplatesListComponent'
+import TemplateOutputComponent from '../components/TemplateOutputComponent'
 
 export default class HomePageContainer extends React.Component {
 
@@ -10,18 +11,18 @@ export default class HomePageContainer extends React.Component {
 
   constructor() {
     super();
-    this.state = {
-      outputTextareaValue: 'テストｂ'
-    };
+    this.state = {};
   }
 
   render() {
     return (
       <div className="container HomePageContainer">
         <div className="row row--prTemp">
-          <TemplatesListComponent/>
+          <div className="col-sm-2">
+            <TemplatesListComponent/>
+          </div>
           <div className="col-sm-10">
-            <textarea className="outputTextarea" name="name" rows={8} cols={40}>{this.state.outputTextareaValue}</textarea>
+            <TemplateOutputComponent/>
           </div>
         </div>
       </div>
