@@ -1,0 +1,19 @@
+{
+  "name": "pull-request-templates",
+  "version": "0.2.10",
+  "homepage": "https://github.com/okmttdhr/pull-request-templates",
+  "authors": [
+    "okp"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

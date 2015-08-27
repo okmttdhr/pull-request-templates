@@ -3,6 +3,7 @@ import AppContainer from './containers/AppContainer'
 import router from './routes/router'
 import debug from './utils/debug'
 import './app.css'
+import './bower_components/bootstrap/dist/css/bootstrap.min.css'
 
 var dd = debug('mainApp')
 

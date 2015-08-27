@@ -31,3 +31,6 @@ node_modules
 
 # App packaged
 release
+
+# bower
+app/bower_components
