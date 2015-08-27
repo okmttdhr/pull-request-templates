@@ -23,16 +23,19 @@
   cursor: pointer;
 }
 
-.TemplatesListComponent-list li a {
+.TemplatesListComponent-list li p {
   color: #333;
 }
 
-.TemplatesListComponent-list li a:hover {
+.TemplatesListComponent-list li p:hover {
   opacity: 0.8;
   color: #337ab7;
+  text-decoration: underline;
 }
 
 .outputTextarea {
   width: 100%;
   height: 500px;
+  color: #333;
+  font-size: 15px;
 }

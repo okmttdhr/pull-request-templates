@@ -24,24 +24,28 @@ class TemplatesListComponent extends React.Component {
     // ...
   }
 
+  handleClick() {
+    console.log('hi');
+  }
+
   render() {
     return (
       <div className="TemplatesListComponent col-sm-2">
         <ul className="TemplatesListComponent-list list-unstyled">
           <li className>
-            <Link to="about">チケット</Link>
+            <p onClick={this.handleClick}>チケット</p>
           </li>
           <li className>
-            <Link to="about">チケット(Redmine)</Link>
+            <p onClick={this.handleClick}>チケット(Redmine)</p>
           </li>
           <li className>
-            <Link to="about">プルリク</Link>
+            <p onClick={this.handleClick}>プルリク</p>
           </li>
           <li className>
-            <Link to="about">プルリク(Redmine)</Link>
+            <p onClick={this.handleClick}>プルリク(Redmine)</p>
           </li>
           <li className>
-            <Link to="about">プルリク(レビュー)</Link>
+            <p onClick={this.handleClick}>プルリク(レビュー)</p>
           </li>
         </ul>
       </div>
