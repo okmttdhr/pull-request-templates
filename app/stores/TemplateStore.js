@@ -1,16 +1,21 @@
 import AppDispatcher from '../dispatcher/AppDispatcher'
-import ActionTypes from '../constants/ActionTypes'
+import TemplateConstants from '../constants/TemplateConstants'
 import createStore from '../utils/createStore'
-
 
 export default createStore({
 
 })
 
+AppDispatcher.register(function(action) {
+  switch (action.actionType) {
 
-AppDispatcher.register(function(payload) {
-  var action = payload.action
-  switch (action.type) {
+    case TemplateConstants.SERVER_ACTION:
+      // 処理
+      break;
+
+    case TemplateConstants.VIEW_ACTION:
+      // 処理
+      break;
 
     default:
 
