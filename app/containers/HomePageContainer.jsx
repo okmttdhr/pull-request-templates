@@ -10,11 +10,13 @@ export default class HomePageContainer extends React.Component {
 
   render() {
     return (
-      <div>
-        <TemplatesListComponent/>
-        <h2>Home Page</h2>
-        <p>This is the homepage.</p>
-        <Link to="about">to About</Link>
+      <div className="container">
+        <div className="row">
+          <TemplatesListComponent/>
+          <div className="col-sm-10">
+            <p>This is the home.</p>
+          </div>
+        </div>
       </div>
     )
   }
