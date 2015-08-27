@@ -10,11 +10,11 @@ export default class HomePageContainer extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container HomePageContainer">
         <div className="row row--prTemp">
           <TemplatesListComponent/>
           <div className="col-sm-10">
-            <p>This is the home.</p>
+            <textarea className="outputTextarea" name="name" rows={8} cols={40}>テストb</textarea>
           </div>
         </div>
       </div>

@@ -1,6 +1,10 @@
 
 .row--prTemp {
-  padding-top: 40px;  
+  padding-top: 40px;
+}
+
+.HomePageContainer {
+
 }
 
 .TemplatesListComponent {
@@ -26,4 +30,9 @@
 .TemplatesListComponent-list li a:hover {
   opacity: 0.8;
   color: #337ab7;
+}
+
+.outputTextarea {
+  width: 100%;
+  height: 500px;
 }
