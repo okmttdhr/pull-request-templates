@@ -11,7 +11,7 @@ export default class HomePageContainer extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
+        <div className="row row--prTemp">
           <TemplatesListComponent/>
           <div className="col-sm-10">
             <p>This is the home.</p>

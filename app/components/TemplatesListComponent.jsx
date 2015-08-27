@@ -31,10 +31,18 @@ class TemplatesListComponent extends React.Component {
           <li className>
             <Link to="about">チケット</Link>
           </li>
-          <li className>チケット(Redmine)</li>
-          <li className>プルリク</li>
-          <li className>プルリク(Redmine)</li>
-          <li className>プルリク(レビュー)</li>
+          <li className>
+            <Link to="about">チケット(Redmine)</Link>
+          </li>
+          <li className>
+            <Link to="about">プルリク</Link>
+          </li>
+          <li className>
+            <Link to="about">プルリク(Redmine)</Link>
+          </li>
+          <li className>
+            <Link to="about">プルリク(レビュー)</Link>
+          </li>
         </ul>
       </div>
     );

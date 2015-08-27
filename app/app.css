@@ -1,6 +1,9 @@
 
+.row--prTemp {
+  padding-top: 40px;  
+}
+
 .TemplatesListComponent {
-  padding-top: 40px;
 }
 
 .TemplatesListComponent-list {
@@ -14,5 +17,13 @@
 
 .TemplatesListComponent-list li:hover {
   cursor: pointer;
+}
+
+.TemplatesListComponent-list li a {
+  color: #333;
+}
+
+.TemplatesListComponent-list li a:hover {
   opacity: 0.8;
+  color: #337ab7;
 }
