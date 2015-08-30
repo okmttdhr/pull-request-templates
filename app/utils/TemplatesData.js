@@ -3,7 +3,7 @@ export default [
     id: 1,
     name: 'チケット',
     content: '~~~~~~~~',
-    selected: false
+    selected: true
   },
   {
     id: 2,

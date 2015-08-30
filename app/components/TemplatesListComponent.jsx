@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router'
+import TemplateItemComponent from './TemplateItemComponent'
 
 class TemplatesListComponent extends React.Component {
 
-  static propTypes = {};
+  static propTypes = {
+    allTemplates: React.PropTypes.object.isRequired
+  };
 
   static defaultProps = {};
 
@@ -29,23 +32,18 @@ class TemplatesListComponent extends React.Component {
   }
 
   render() {
+    var allTemplates = this.props.allTemplates;
+    var templates = [];
+
+    for (var key in allTemplates) {
+      templates.push(<TemplateItemComponent key={key} template={allTemplates[key]} />);
+    }
+
     return (
       <div className="TemplatesListComponent">
         <ul className="TemplatesListComponent-list list-unstyled">
           <li className>
-            <p onClick={this.handleClick}>チケット</p>
-          </li>
-          <li className>
-            <p onClick={this.handleClick}>チケット(Redmine)</p>
-          </li>
-          <li className>
-            <p onClick={this.handleClick}>プルリク</p>
-          </li>
-          <li className>
-            <p onClick={this.handleClick}>プルリク(Redmine)</p>
-          </li>
-          <li className>
-            <p onClick={this.handleClick}>プルリク(レビュー)</p>
+            {templates}
           </li>
         </ul>
       </div>

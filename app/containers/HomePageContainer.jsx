@@ -2,6 +2,13 @@ import React from 'react'
 import { Link } from 'react-router'
 import TemplatesListComponent from '../components/TemplatesListComponent'
 import TemplateOutputComponent from '../components/TemplateOutputComponent'
+import TemplateStore from '../stores/TemplateStore'
+
+function getTemplateState() {
+  return {
+    allTemplates: TemplateStore.getAll(),
+  };
+}
 
 export default class HomePageContainer extends React.Component {
 
@@ -11,7 +18,15 @@ export default class HomePageContainer extends React.Component {
 
   constructor() {
     super();
-    this.state = {};
+    this.state = getTemplateState();
+  }
+
+  componentDidMount() {
+    TemplateStore.addChangeListener(this._onChange);
+  }
+
+  componentWillUnmount() {
+    TemplateStore.removeChangeListener(this._onChange);
   }
 
   render() {
@@ -19,7 +34,7 @@ export default class HomePageContainer extends React.Component {
       <div className="container HomePageContainer">
         <div className="row row--prTemp">
           <div className="col-sm-2">
-            <TemplatesListComponent/>
+            <TemplatesListComponent allTemplates={this.state.allTemplates}/>
           </div>
           <div className="col-sm-10">
             <TemplateOutputComponent/>

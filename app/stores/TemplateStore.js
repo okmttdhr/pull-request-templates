@@ -6,7 +6,9 @@ import TemplatesData from '../utils/TemplatesData'
 var _templates = TemplatesData;
 
 export default createStore({
-
+  getAll: function() {
+    return _templates;
+  }
 })
 
 AppDispatcher.register(function(action) {
