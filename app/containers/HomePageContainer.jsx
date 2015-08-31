@@ -37,7 +37,7 @@ export default class HomePageContainer extends React.Component {
             <TemplatesListComponent allTemplates={this.state.allTemplates}/>
           </div>
           <div className="col-sm-10">
-            <TemplateOutputComponent/>
+            <TemplateOutputComponent allTemplates={this.state.allTemplates}/>
           </div>
         </div>
       </div>

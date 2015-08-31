@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'チケット',
-    content: '~~~~~~~~',
+    content: '内容だよ~~~~~~~~',
     selected: true
   },
   {
