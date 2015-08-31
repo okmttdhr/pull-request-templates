@@ -39,8 +39,6 @@ class TemplateOutputComponent extends React.Component {
       <div className="TemplateOutputComponent">
         <textarea className="TemplateOutputComponent-textarea--output"
           name="name"
-          rows={8}
-          cols={40}
           value={selectedTemplate.content}/>
       </div>
     );
