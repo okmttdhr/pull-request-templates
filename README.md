@@ -4,7 +4,7 @@
 
 ## Structure
 
-React+Flux+Babel+Webpack+Electron
+React+React Router+Flux+Babel+Webpack+Electron
 
 ## Install
 
