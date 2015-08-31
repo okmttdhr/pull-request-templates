@@ -22,11 +22,11 @@ export default class HomePageContainer extends React.Component {
   }
 
   componentDidMount() {
-    TemplateStore.addChangeListener(this._onChange);
+    TemplateStore.addChangeListener(this._onChange.bind(this));
   }
 
   componentWillUnmount() {
-    TemplateStore.removeChangeListener(this._onChange);
+    TemplateStore.removeChangeListener(this._onChange.bind(this));
   }
 
   render() {
@@ -42,6 +42,10 @@ export default class HomePageContainer extends React.Component {
         </div>
       </div>
     )
+  }
+
+  _onChange() {
+    this.setState(getTemplateState());
   }
 
 }

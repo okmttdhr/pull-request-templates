@@ -1,10 +1,10 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var TemplateConstants = require('../constants/TemplateConstants');
 
-class TemplateActions {
+var TemplateActions = {
   updateSelected(id) {
     AppDispatcher.dispatch({
-      actionType: TodoConstants.UPDATE_SELECTED,
+      actionType: TemplateConstants.UPDATE_SELECTED,
       id: id
     });
   }
