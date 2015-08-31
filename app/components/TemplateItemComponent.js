@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router'
-import TemplateActions from '../action/TemplateActions'
+import TemplateActions from '../actions/TemplateActions'
 
 class TemplateItemComponent extends React.Component {
 
