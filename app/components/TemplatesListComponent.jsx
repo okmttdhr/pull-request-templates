@@ -10,9 +10,11 @@ class TemplatesListComponent extends React.Component {
 
   static defaultProps = {};
 
-  constructor() {
-    super();
-    this.state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      allTemplates: this.props.allTemplates
+    };
   }
 
   componentDidMount() {
@@ -28,7 +30,7 @@ class TemplatesListComponent extends React.Component {
   }
 
   render() {
-    var allTemplates = this.props.allTemplates;
+    var allTemplates = this.state.allTemplates;
     var templates = [];
 
     for (var key in allTemplates) {

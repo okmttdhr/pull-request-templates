@@ -10,9 +10,11 @@ class TemplateItemComponent extends React.Component {
 
   static defaultProps = {};
 
-  constructor() {
-    super();
-    this.state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      template: this.props.template
+    };
   }
 
   componentDidMount() {
@@ -28,16 +30,15 @@ class TemplateItemComponent extends React.Component {
   }
 
   updateTemplate() {
-    console.log('updateTemplate()');
-    TemplateActions.updateSelected(this.props.template.id);
+    TemplateActions.updateSelected(this.state.template.id);
   }
 
   render() {
-    var template = this.props.template;
+    var template = this.state.template;
 
     return (
       <li className>
-        <p onClick={this.updateTemplate}>{template.name}</p>
+        <p onClick={this.updateTemplate.bind(this)}>{template.name}</p>
       </li>
     );
   }
