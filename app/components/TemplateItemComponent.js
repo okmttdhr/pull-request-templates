@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router'
+import classNames from 'classnames'
 import TemplateActions from '../actions/TemplateActions'
 
 class TemplateItemComponent extends React.Component {
@@ -12,9 +13,7 @@ class TemplateItemComponent extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      template: this.props.template
-    };
+    this.state = {};
   }
 
   componentDidMount() {
@@ -30,14 +29,17 @@ class TemplateItemComponent extends React.Component {
   }
 
   updateTemplate() {
-    TemplateActions.updateSelected(this.state.template.id);
+    TemplateActions.updateSelected(this.props.template.id);
   }
 
   render() {
-    var template = this.state.template;
+    var template = this.props.template;
+    var classes = classNames({
+      'active': template.selected
+    });
 
     return (
-      <li className>
+      <li className={classes}>
         <p onClick={this.updateTemplate.bind(this)}>{template.name}</p>
       </li>
     );

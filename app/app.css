@@ -23,6 +23,10 @@
   cursor: pointer;
 }
 
+.TemplatesListComponent-list li.active p {
+  color: #337ab7;
+}
+
 .TemplatesListComponent-list li p {
   color: #333;
 }
