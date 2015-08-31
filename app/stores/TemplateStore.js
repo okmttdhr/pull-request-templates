@@ -14,12 +14,8 @@ export default createStore({
 AppDispatcher.register(function(action) {
   switch (action.actionType) {
 
-    case TemplateConstants.SERVER_ACTION:
-      // 処理
-      break;
-
-    case TemplateConstants.VIEW_ACTION:
-      // 処理
+    case TemplateConstants.UPDATE_SELECTED:
+      
       break;
 
     default:

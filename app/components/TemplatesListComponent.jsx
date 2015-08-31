@@ -27,10 +27,6 @@ class TemplatesListComponent extends React.Component {
     // ...
   }
 
-  handleClick() {
-    console.log('hi');
-  }
-
   render() {
     var allTemplates = this.props.allTemplates;
     var templates = [];
@@ -42,9 +38,7 @@ class TemplatesListComponent extends React.Component {
     return (
       <div className="TemplatesListComponent">
         <ul className="TemplatesListComponent-list list-unstyled">
-          <li className>
-            {templates}
-          </li>
+          {templates}
         </ul>
       </div>
     );

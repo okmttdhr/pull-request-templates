@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router'
+import TemplateActions from '../action/TemplateActions'
 
 class TemplateItemComponent extends React.Component {
 
@@ -26,12 +27,17 @@ class TemplateItemComponent extends React.Component {
     // ...
   }
 
+  updateTemplate() {
+    console.log('updateTemplate()');
+    TemplateActions.updateSelected(this.props.template.id);
+  }
+
   render() {
     var template = this.props.template;
 
     return (
       <li className>
-        <p onClick={this.handleClick}>{template.name}</p>
+        <p onClick={this.updateTemplate}>{template.name}</p>
       </li>
     );
   }
