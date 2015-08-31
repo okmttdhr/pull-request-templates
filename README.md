@@ -2,7 +2,7 @@
 
 > Using [electron-react-boilerplate](chentsulin/electron-react-boilerplate https://github.com/chentsulin/electron-react-boilerplate).
 
-# Application Structure
+## Structure
 
 React+Flux+Babel+Webpack+Electron
 
