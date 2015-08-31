@@ -1,5 +1,7 @@
 # pull-request-templates
 
+> Using [electron-react-boilerplate](chentsulin/electron-react-boilerplate https://github.com/chentsulin/electron-react-boilerplate).
+
 ## Install
 
 Install dependencies.
