@@ -3,14 +3,16 @@ import React from 'react';
 class TemplateOutputComponent extends React.Component {
 
   static propTypes = {
-    allTemplates: React.PropTypes.object.isRequired
+    allTemplates: React.PropTypes.array.isRequired
   };
 
   static defaultProps = {};
 
-  constructor() {
-    super();
-    this.state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      allTemplates: this.props.allTemplates
+    };
   }
 
   componentDidMount() {
@@ -22,11 +24,11 @@ class TemplateOutputComponent extends React.Component {
   }
 
   shouldComponentUpdate() {
-    // ...
+    return true;
   }
 
   render() {
-    var allTemplates = this.props.allTemplates;
+    var allTemplates = this.state.allTemplates;
     var selectedTemplate;
 
     for (var key in allTemplates) {
@@ -35,9 +37,11 @@ class TemplateOutputComponent extends React.Component {
 
     return (
       <div className="TemplateOutputComponent">
-        <textarea className="TemplateOutputComponent-textarea--output" name="name" rows={8} cols={40}>
-          {selectedTemplate.content}
-        </textarea>
+        <textarea className="TemplateOutputComponent-textarea--output"
+          name="name"
+          rows={8}
+          cols={40}
+          value={selectedTemplate.content}/>
       </div>
     );
   }

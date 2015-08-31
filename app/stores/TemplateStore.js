@@ -12,12 +12,15 @@ function update(id, updates) {
 }
 
 function updateSelected(target_id, updates) {
-  for (var id in _templates) {
-    if (id === target_id) update(id, {selected: true});
-    update(id, updates);
+  for (let id in _templates) {
+    id = parseInt(id, 10);
+    if (id === target_id) {
+      update(id, {selected: true});
+    } else {
+      update(id, updates);
+    }
   }
 }
-
 
 var TemplateStore = assign({}, EventEmitter.prototype, createStore, {
   getAll() {

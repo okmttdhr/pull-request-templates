@@ -26,7 +26,7 @@ class TemplateItemComponent extends React.Component {
   }
 
   shouldComponentUpdate() {
-    // ...
+    return true;
   }
 
   updateTemplate() {

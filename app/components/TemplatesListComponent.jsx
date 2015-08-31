@@ -5,7 +5,7 @@ import TemplateItemComponent from './TemplateItemComponent'
 class TemplatesListComponent extends React.Component {
 
   static propTypes = {
-    allTemplates: React.PropTypes.object.isRequired
+    allTemplates: React.PropTypes.array.isRequired
   };
 
   static defaultProps = {};
@@ -26,7 +26,7 @@ class TemplatesListComponent extends React.Component {
   }
 
   shouldComponentUpdate() {
-    // ...
+    return true;
   }
 
   render() {
